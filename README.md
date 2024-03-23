@@ -5,11 +5,11 @@ If you need to expose an rclone mount via NFS, also have a look at our [rclone-n
 
 ## Quickstart
 Your rclone.conf file in the directory you mount into the docker container _needs to contain_ a remote with the name `remote`. Only this remote will be mounted and exposed via SMB/CIFS.
-
+```
 docker build . -t rclonesambaserver
 
 docker run --privileged --cap-add SYS_ADMIN --device /dev/fuse -v /root:/rclone/config -e SHARE="remote;/mnt/remote" -p 0.0.0.0:139:139 -p 0.0.0.0:445:445 rclonesambaserver:latest
-
+```
 ```
 [remote] # the name here is important
 type = crypt
