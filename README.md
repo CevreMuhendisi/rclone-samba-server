@@ -46,8 +46,6 @@ You can customize many settings in the underlying samba-server. For example it's
 You can find all customization options and environment variables [here](https://github.com/dperson/samba).
 Please be aware that mostly **only the environment variables** work with this image.
 
-## Contribute
-Feel free to contribute to this open source project. Just fork, change and create a pull or merge request to this repository.
 
 ### Ideas & Improvements
 * Make rclone mount configurable
