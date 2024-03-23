@@ -18,7 +18,7 @@ ENV PERMISSIONS=true
 ENV RECYCLE=false
 
 # to change in production environments, just some defaults
-ENV USER="demoUser;changeme"
-ENV SHARE="remote;/mnt/remote;yes;no;no;demoUser;none;;;"
+ENV USER="pi;pi2"
+ENV SHARE="remote;/mnt/remote;yes;no;no;pi;none;;;"
 
 ENTRYPOINT ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
