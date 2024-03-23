@@ -8,7 +8,7 @@ Your rclone.conf file in the directory you mount into the docker container _need
 ```
 docker build . -t rclonesambaserver
 
-docker run --privileged --cap-add SYS_ADMIN --device /dev/fuse -v /root:/rclone/config -e SHARE="remote;/mnt/remote" -p 0.0.0.0:139:139 -p 0.0.0.0:445:445 rclonesambaserver:latest
+docker run -dit --name=rclonesambaserver --privileged --cap-add SYS_ADMIN --device /dev/fuse --restart always -v /root:/rclone/config -e SHARE="remote;/mnt/remote" -p 0.0.0.0:139:139 -p 0.0.0.0:445:445 rclonesambaserver:latest
 ```
 ```
 [remote] # the name here is important
