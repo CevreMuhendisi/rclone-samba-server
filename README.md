@@ -4,6 +4,7 @@ This docker image provides you with a small [samba-server](https://github.com/dp
 ## Quickstart
 Your rclone.conf file in the directory you mount into the docker container _needs to contain_ a remote with the name `remote`. Only this remote will be mounted and exposed via SMB/CIFS.
 ```
+git clone https://github.com/CevreMuhendisi/rclone-samba-server rsc/ && cd rsc
 docker build . -t rclonesambaserver
 
 docker run -dit --name=rclonesambaserver --privileged --cap-add SYS_ADMIN --device /dev/fuse --restart always -v /root:/rclone/config -e SHARE="remote;/mnt/remote" -p 0.0.0.0:139:139 -p 0.0.0.0:445:445 rclonesambaserver:latest
