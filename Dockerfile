@@ -1,6 +1,6 @@
 FROM dperson/samba:latest
 COPY smb.conf /etc/samba/smb.conf
-RUN apk --no-cache --no-progress upgrade && apk --no-cache --no-progress add unzip supervisor fuse fuse3
+RUN apk --no-cache --no-progress upgrade && apk --no-cache --no-progress add unzip supervisor fuse fuse3 nano
 COPY supervisord.conf /etc/supervisord.conf
 COPY rclone-mount.sh /rclone-mount.sh
 RUN chmod +x /rclone-mount.sh
