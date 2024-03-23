@@ -1,8 +1,6 @@
 # Rclone-Samba-Server
 This docker image provides you with a small [samba-server](https://github.com/dperson/samba) that exposes your [rclone](https://rclone.org) remote. You can then access all your rclones remote files via SMB/CIFS.
 
-If you need to expose an rclone mount via NFS, also have a look at our [rclone-nfs-server](https://gitlab.com/encircle360-oss/rclone-nfs-server) project.
-
 ## Quickstart
 Your rclone.conf file in the directory you mount into the docker container _needs to contain_ a remote with the name `remote`. Only this remote will be mounted and exposed via SMB/CIFS.
 ```
