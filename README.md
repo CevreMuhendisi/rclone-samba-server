@@ -51,5 +51,3 @@ Please be aware that mostly **only the environment variables** work with this im
 * Make rclone mount configurable
 * Multiple rcloune mounts and samba exports
 
-## Credits
-This is open source software by [encircle360](https://encircle360.com). Use on your own risk and for personal use. If you need support or consultancy just contact us.
